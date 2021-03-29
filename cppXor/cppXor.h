@@ -1,8 +1,15 @@
-﻿// cppXor.h : fichier Include pour les fichiers Include système standard,
-// ou les fichiers Include spécifiques aux projets.
-
-#pragma once
+﻿#pragma once
 
 #include <iostream>
+#include <fstream>
+#include <string>
 
-// TODO: Référencez ici les en-têtes supplémentaires nécessaires à votre programme.
+using namespace std;
+
+class MyClass
+{
+public:
+	int genKey();
+	string xorstr(const char* str, const char* key, size_t key_len);
+	void printInFile(char message[]);
+};
