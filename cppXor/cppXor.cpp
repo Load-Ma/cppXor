@@ -23,7 +23,8 @@ int main()
 {
 	char message[70] = { 0 }; 
 	printf("Entrez un message : ");
-	scanf_s("%[^\t\n]", (char*)message);
+	scanf("%[^\t\n]", message);
+	printf("%s \n", message);
 
 	string key = genKey();
 	string result = xorstr(message, key.c_str(), strlen(key.c_str()));
